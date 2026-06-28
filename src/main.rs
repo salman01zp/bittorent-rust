@@ -1,12 +1,11 @@
 use anyhow::Context;
-use clap::Parser;
 use bittorent_rs::torrent::{self, Keys, Torrent};
 use bittorent_rs::tracker::*;
 use bittorent_rs::types::{Args, Command};
+use clap::Parser;
 use serde_bencode;
 use serde_json;
 use sha1::{Digest, Sha1};
-
 
 #[allow(dead_code)]
 fn decode_bencoded_value(encoded_value: &str) -> (serde_json::Value, &str) {
