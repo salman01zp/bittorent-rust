@@ -1,6 +1,5 @@
 use std::env;
 
-
 #[allow(dead_code)]
 fn decode_bencoded_value(encoded_value: &str) -> serde_json::Value {
     // If encoded_value starts with a digit, it's a number
@@ -17,7 +16,6 @@ fn decode_bencoded_value(encoded_value: &str) -> serde_json::Value {
     }
     panic!("Unhandled encoded value: {}", encoded_value)
 }
-
 
 fn main() {
     let args: Vec<String> = env::args().collect();
